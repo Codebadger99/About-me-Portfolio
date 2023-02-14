@@ -41,7 +41,7 @@ var forEach = function (array, callback, scope) {
 
 
 ScrollReveal({
-  reset: true,
+  // reset: true,
   distance: '60px',
   duration: 2500,
   delay: 400
