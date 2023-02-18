@@ -19,7 +19,7 @@ body {
 
 .header {
   background-color: rgb(43, 34, 34);
-  height: 50vh;
+  height: 54vh;
 }
 
 nav > h1 {
@@ -151,6 +151,23 @@ img {
   flex-direction: column;
   text-transform: capitalize;
   gap: 1.9em;
+}
+
+.git{
+  margin-bottom: 3em;
+}
+
+.work{
+  background-color: #25aae1;
+  padding: 0.6em 2em;
+  border: none;
+  border-radius: 1em;
+} 
+
+.work > a{
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
 }
 
 .my-name > h1 > span {
@@ -774,7 +791,6 @@ svg {
 }
 
 @media screen and (max-width: 360px) {
-
   body {
     overflow-x: hidden !important;
 }
@@ -782,9 +798,12 @@ svg {
     box-sizing: border-box;
   }
 
-  .about-me-image{
-    width: 100%;
-    max-width: 100%;
+  .header{
+    height: 55vh;
+  }
+
+  .about-me-image > img{
+   width: 300px;
   }
   .about-me-text {
     width: 300px;
@@ -800,6 +819,10 @@ svg {
   *::after,::before{
     box-sizing: border-box;
   }
+
+  .about-me-image > img{
+    width: 300px;
+   }
   .about-me-text {
     width: 300px;
     font-size: 3.5vw;
@@ -814,6 +837,10 @@ svg {
   *::after,::before{
     box-sizing: border-box;
   }
+
+  .about-me-image > img{
+    width: 300px;
+   }
   .about-me-text {
     width: 300px;
     margin-left: 8em;

@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js" integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>About me portfolio</title>
 </head>
 <body>
     <div class="header">
         <nav>
-            <h1>Ebuka.</h1>
-            <ul>
+            <h1 class="name">Ebuka.</h1>
+            <ul  class="nav_link">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Me</a></li>
                 <li><a href="#">Projects</a></li>
@@ -29,6 +28,9 @@
         <div class="my-name">
             <h1>hi, my name is <span>ebuka omekara emmanuel</span></h1>
             <h2 class="myself">i am a frontend developer</h2>
+            <div class="git">
+              <button class="work"><a href="https://github.com/Codebadger99">My work</a></button>
+            </div>
           </div>
         <div class="blob-position">
             <img src="assets/blobanimation.svg">
@@ -212,17 +214,11 @@
     <circle class="drop drop2" cx="25" cy="2.5" r="1.5"  />
     <circle class="drop drop3" cx="16" cy="2.8" r="1.2"  />
       <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
-    
-      <!-- g mask="url(#xxx)">
-      <path   id="wave1"  class="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
-      </g>
-    </g -->
-  
   </svg>
   
     <div>Done By Ebuka Omekara </div>
   </footer>
-
+  <script src="https://unpkg.com/scrollreveal"></script>
    <script src="index.js"></script>
 </body>
 </html>
