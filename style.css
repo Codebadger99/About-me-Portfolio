@@ -6,20 +6,20 @@
   font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
   color: #fff;
   background-color: rgba(61, 57, 57, 0.74);
-  overflow-x: hidden ;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
 .header {
   background-color: rgb(43, 34, 34);
-  height: 54vh;
+  height: 56vh;
 }
 
 nav > h1 {
@@ -153,18 +153,18 @@ img {
   gap: 1.9em;
 }
 
-.git{
+.git {
   margin-bottom: 3em;
 }
 
-.work{
+.work {
   background-color: #25aae1;
   padding: 0.6em 2em;
   border: none;
   border-radius: 1em;
-} 
+}
 
-.work > a{
+.work > a {
   text-decoration: none;
   color: white;
   text-transform: capitalize;
@@ -711,17 +711,18 @@ svg {
 }
 
 @media screen and (max-width: 900px) {
-
-
-  *::after,::before{
+  *::after,
+  ::before {
     box-sizing: border-box;
   }
 
   body {
     overflow-x: hidden !important;
-}
+  }
   .hamburger {
     display: block;
+    position: relative;
+    z-index: 999;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -741,7 +742,7 @@ svg {
     flex-direction: column;
     width: 100%;
     position: fixed;
-    gap: 4em;
+    gap: 2em;
     top: -100%;
     background: #636363; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -762,8 +763,12 @@ svg {
     z-index: 1;
   }
 
+  ul > li {
+    margin-top: 4em;
+  }
+
   ul.active {
-    top: 10%;
+    top: 0;
   }
 
   .about-me {
@@ -788,23 +793,35 @@ svg {
   .progress {
     width: 160px;
   }
+
+  .blob-position,
+  .blob-position-2 {
+    visibility: hidden;
+  }
+
+  .name {
+    position: relative;
+    z-index: 999;
+  }
 }
 
 @media screen and (max-width: 360px) {
   body {
     overflow-x: hidden !important;
-}
-  *::after,::before{
+  }
+  *::after,
+  ::before {
     box-sizing: border-box;
   }
 
-  .header{
-    height: 55vh;
+  .header {
+    height: 60vh;
   }
 
-  .about-me-image > img{
-   width: 300px;
+  .about-me-image > img {
+    width: 300px;
   }
+  
   .about-me-text {
     width: 300px;
     margin-left: 9em;
@@ -815,14 +832,15 @@ svg {
 @media screen and (max-width: 393px) {
   body {
     overflow-x: hidden !important;
-}
-  *::after,::before{
+  }
+  *::after,
+  ::before {
     box-sizing: border-box;
   }
 
-  .about-me-image > img{
+  .about-me-image > img {
     width: 300px;
-   }
+  }
   .about-me-text {
     width: 300px;
     font-size: 3.5vw;
@@ -833,17 +851,37 @@ svg {
 @media screen and (max-width: 415px) {
   body {
     overflow-x: hidden !important;
-}
-  *::after,::before{
+  }
+  *::after,
+  ::before {
     box-sizing: border-box;
   }
 
-  .about-me-image > img{
+  .about-me-image > img {
     width: 300px;
-   }
+  }
+
   .about-me-text {
     width: 300px;
     margin-left: 8em;
+    font-size: 3.7vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    height: 67vh;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .about-me-image > img {
+    width: 300px;
+  }
+
+  .about-me-text {
+    width: 300px;
+    margin-left: 8.5em;
     font-size: 3.7vw;
   }
 }
