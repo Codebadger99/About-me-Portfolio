@@ -1,28 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap");
-
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-body {
+html,body {
   color: #fff;
   background-color: rgba(61, 57, 57, 0.74);
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .header {
   background-color: rgb(43, 34, 34);
-  height: 78vh;
+  height: 40%;
   width: 100%;
 }
 
@@ -51,7 +50,7 @@ nav li a {
   font-weight: bold;
 }
 
-nav ul li ::after {
+nav ul li a::after {
   content: "";
   height: 3px;
   width: 0;
@@ -62,13 +61,14 @@ nav ul li ::after {
   transition: 0.5s;
 }
 
-nav ul li:hover::after {
+nav ul li a:hover::after {
   width: 100%;
 }
 
 .hamburger {
   display: none;
   cursor: pointer;
+  transition: .3s ease-in-out;
 }
 
 .bar {
@@ -78,7 +78,6 @@ nav ul li:hover::after {
   margin: 5px auto;
   transition: all 0.3s ease ease-in-out;
   background-color: #fff;
-  border-radius: 20em;
 }
 
 .sign-in {
@@ -113,23 +112,10 @@ nav ul li:hover::after {
     #2bb673
   );
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+ 
 }
 
 img {
-  overflow: hidden;
-}
-
-.blob-position {
-  width: 30%;
-  margin-top: -30em;
-  margin-left: -7em;
-  overflow: hidden;
-}
-
-.blob-position-2 {
-  width: 30%;
-  margin-top: -11em;
-  margin-left: 75em;
   overflow: hidden;
 }
 
@@ -145,6 +131,7 @@ img {
   margin: 5px auto;
   transition: all 0.3s ease ease-in-out;
   background-color: #fff;
+  border-radius: 20em;
 }
 
 .my-name {
@@ -182,6 +169,8 @@ img {
 
 .about-me {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about > h1 {
@@ -195,11 +184,9 @@ img {
 
 .about-me-text {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 10em;
+  margin-top: 3em;
   margin-left: 5em;
   width: 600px;
-  /* padding: 2em; */
   text-transform: capitalize;
   line-height: 2em;
 }
@@ -716,18 +703,16 @@ svg {
 }
 
 @media screen and (max-width: 900px) {
-  *::after,
-  ::before {
-    box-sizing: border-box;
-  }
-
-  body {
-    overflow-x: hidden !important;
+  html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
   }
   .hamburger {
     display: block;
-    position: relative;
-    z-index: 999;
+    transition: .3s ease-in-out;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -758,6 +743,7 @@ svg {
     right: 100%;
     transition: .80s ease-in-out;
     gap: 2em;
+    z-index: 999;
   }
 
   ul.active {
@@ -799,20 +785,21 @@ svg {
 }
 
 @media screen and (max-width: 360px) {
-  body {
-    overflow-x: hidden !important;
-  }
-  *::after,
-  ::before {
-    box-sizing: border-box;
-  }
 
+  html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
   .header {
     height: 60vh;
   }
 
   .about-me-image > img {
-    width: 300px;
+    width: 290px;
   }
   
   .about-me-text {
@@ -823,15 +810,15 @@ svg {
 }
 
 @media screen and (max-width: 393px) {
-  body {
-    overflow-x: hidden !important;
-  }
-  *::after,
-  ::before {
-    box-sizing: border-box;
+  html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
   }
 
-  .about-me-image > img {
+.about-me-image > img {
     width: 300px;
   }
   .about-me-text {
@@ -842,14 +829,14 @@ svg {
 }
 
 @media screen and (max-width: 415px) {
-  body {
-    overflow-x: hidden !important;
-  }
-  *::after,
-  ::before {
-    box-sizing: border-box;
-  }
 
+  html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
   .about-me-image > img {
     width: 300px;
   }
@@ -862,12 +849,27 @@ svg {
 }
 
 @media screen and (max-width: 375px) {
+  html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
   .header {
     height: 67vh;
   }
 }
 
+
 @media screen and (max-width: 428px) {
+  html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
   .about-me-image > img {
     width: 300px;
   }
