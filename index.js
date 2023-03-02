@@ -43,27 +43,3 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-ScrollReveal({
-  // reset: true,
-  distance: "60px",
-  duration: 2500,
-  delay: 400,
-});
-ScrollReveal().reveal(".my-name > h2, .name, .hamburger" ,{
-  delay: "200",
-  origin: "top",
-  interval: 400,
-});
-ScrollReveal().reveal(
-  ".my-name > h1, .about > h1, .skill > h1, .active-2, .active-4, .contact > h1, .git",
-  { delay: "250", origin: "left" }
-);
-ScrollReveal().reveal(".about-me-image, .active-1, .active-3,  .nav_link", {
-  delay: "700",
-  origin: "right",
-});
-ScrollReveal().reveal(".about-me-text,.container,.footer", {
-  delay: "100",
-  origin: "bottom",
-  interval: 500,
-});
